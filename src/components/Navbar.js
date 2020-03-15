@@ -13,7 +13,7 @@ const Navbar = () =>{
                 <ul className="navbar-nav ml-auto">
                     <Login />
                     <li className="mr-5">
-                        <a href="/" className="nav-link">GitHub</a>
+                        <a href="https://github.com/LiChuanXD/react-redux-post" className="nav-link">GitHub</a>
                     </li>
                 </ul>
             </div>
