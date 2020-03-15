@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React , { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Provider } from 'react-redux';
+import store from './redux/store/reduxStore';
+
+import Navbar from './components/Navbar'
+import Write from './components/Write';
+import Posts from './components/Posts';
+
+class App extends Component{
+  render(){
+    return(
+      <Provider store={store}>
+        <div className="App container-fluid">
+          <Navbar />
+          <Write />
+          <hr />
+          <Posts />
+        </div>
+      </Provider>
+      
+    )
+  }
 }
+
 
 export default App;
